@@ -4,9 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Tableau de bord - Admin</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+       <link rel="stylesheet" href="css/styles.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <style>
+  
+     <style>
         .stat-container {
             margin-top: 30px;
         }
@@ -20,29 +22,30 @@
     </style>
 </head>
 <body>
-
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">Hospital Management</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link active" href="#">Tableau de bord</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="affectation_chambre.jsp">Affectation des chambres</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="planification_sortie.jsp">Planification des sorties</a>
-                </li>
-            </ul>
+ <!-- Header -->
+  <header style="background-color: #1e3a5f; padding: 20px 60px; border-bottom: 4px solid #7e0021; box-shadow: 0 4px 12px rgba(0,0,0,0.2); color: white;">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+        <!-- Logo et titre -->
+        <div class="d-flex align-items-center gap-3">
+            <img src="image/image2.png" alt="Logo" style="height: 50px;">
+            <span class="fs-3 fw-bold text-uppercase" style="text-shadow: 0 2px 4px rgba(126, 0, 33, 0.6);">
+                CarePath
+            </span>
+        </div>
+        
+        <!-- Liens de navigation affichés côte à côte -->
+        <div class="d-flex gap-3">
+            <a class="nav-link active text-white" href="#">Tableau de bord</a>
+            <a class="nav-link text-white" href="creerUtilisateur.jsp">Créer utilisateur</a>
+            <a class="nav-link text-white" href="affectation_chambre.jsp">Affectation des chambres</a>
+            <a class="nav-link text-white" href="planification_sortie.jsp">Planification des sorties</a>
         </div>
     </div>
-</nav>
+</header>
+
+
+
+
 
 <div class="container mt-5">
     <h2 class="mb-4">Tableau de bord Administratif</h2>
@@ -79,7 +82,11 @@
         <h3>📊 Statistiques d'occupation des lits</h3>
         <canvas id="occupationChart" width="400" height="200"></canvas>
     </div>
+     <a href="index.jsp" class="btn btn-secondary mt-4">⬅️ Retour à l'accueil</a>
 </div>
+<footer>
+     &copy; 2025 - CarePath. Tous droits réservés.
+   </footer>
 
 <script>
     var ctx = document.getElementById('occupationChart').getContext('2d');
@@ -108,6 +115,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
 
 </body>
 </html>
